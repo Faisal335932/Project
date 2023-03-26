@@ -9,9 +9,12 @@ const Stack = createNativeStackNavigator();
 const Navigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        // hideStatusBar={true}
+      >
         <Stack.Screen
           name="Splash"
+
           component={Splash}
           options={{
             headerShown: false,

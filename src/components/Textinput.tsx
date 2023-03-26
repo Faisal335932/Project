@@ -1,7 +1,8 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
-import React from 'react'
+import React,{useState} from 'react'
 
 export default function Textinput({plc,scuretextvalue}){
+  const [email, setemail] = useState()
   return (
     <TextInput
     placeholder={plc}
@@ -9,6 +10,8 @@ export default function Textinput({plc,scuretextvalue}){
     disableFullscreenUI={false}
     placeholderTextColor="black"
     secureTextEntry={scuretextvalue ? true : false}
+    value={email}
+    onChangeText={(txt)=>setemail(txt)}
     />
   )
 }

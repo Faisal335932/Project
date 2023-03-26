@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React,{useEffect} from 'react'
 import Navigator from './Navigator'
 
@@ -11,6 +11,9 @@ const Splash = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+      <StatusBar
+      hidden={true}
+      />
       <Image source={require('../assets/logo.jpg')} style={styles.imgstyle} />
     </View>
   )

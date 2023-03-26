@@ -1,18 +1,25 @@
-import { Image, StyleSheet, Text, View,TouchableOpacity } from 'react-native'
-import React from 'react'
+import { Image, StyleSheet, Text, View,TouchableOpacity,StatusBar } from 'react-native'
+import React,{useState} from 'react'
 import Textinput from '../components/Textinput'
 import Btn from '../components/Btn'
 import SignOptions from '../components/SignOptions'
 
 const Signup = ({navigation}) => {
+  const [email, setemail] = useState('');
+  const [password, setpassword] = useState('');
+  
   const onPress = () => navigation.replace('Signup');
   return (
     <View style={styles.container}>
+      <StatusBar
+      backgroundColor="#242121"
+      />
       <Image source={require('../assets/bgcleanlogo.png')} style={styles.imgstyle} />
       <View style={styles.centercontainer}>
         <Text style={styles.textcontainer}>Login to Your Account</Text>
         <Textinput
           plc="Email"
+          
         />
         <Textinput
           plc="Password"
